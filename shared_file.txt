@@ -1,83 +1,163 @@
-node_C(1) -- 1707156628.2994714
-node_B(1) -- 1707156631.627721
-node_C(1) -- 1707156633.3161614
-node_B(1) -- 1707156642.6445253
-node_C(1) -- 1707156651.3441923
-node_B(1) -- 1707156651.6610115
-node_C(1) -- 1707156665.3721912
-node_B(1) -- 1707156666.6915157
-node_C(1) -- 1707156673.394674
-node_D(1) -- 1707156676.2867508
-node_B(1) -- 1707156680.718001
-node_D(1) -- 1707156688.313396
-node_C(1) -- 1707156690.424469
-node_B(1) -- 1707156692.7428637
-node_C(1) -- 1707156695.4427755
-node_D(1) -- 1707156704.3385897
-node_B(1) -- 1707156711.7656195
-node_C(1) -- 1707156713.4827952
-node_D(1) -- 1707156715.3688343
-node_B(1) -- 1707156716.7823641
-node_C(1) -- 1707156721.4989412
-node_D(1) -- 1707156725.3928313
-node_B(1) -- 1707156734.8126607
-node_C(1) -- 1707156736.5242407
-node_D(1) -- 1707156737.4152098
-node_C(1) -- 1707156742.5409238
-node_D(1) -- 1707156744.434859
-node_C(1) -- 1707156748.5592542
-node_B(1) -- 1707156752.8388638
-node_C(1) -- 1707156755.573313
-node_B(1) -- 1707156757.85622
-node_D(1) -- 1707156761.4642394
-node_C(1) -- 1707156765.5980275
-node_B(1) -- 1707156765.8698046
-node_D(1) -- 1707156771.4845755
-node_C(1) -- 1707156772.615104
-node_B(1) -- 1707156773.8872643
-node_C(1) -- 1707156778.6324673
-node_B(1) -- 1707156779.907034
-node_D(1) -- 1707156780.5045533
-node_D(1) -- 1707156787.523847
-node_C(1) -- 1707156794.6607256
-node_B(1) -- 1707156795.9351964
-node_D(1) -- 1707156799.5484483
-node_C(1) -- 1707156802.6800356
-node_B(1) -- 1707156803.95444
-node_C(1) -- 1707156811.6984413
-node_B(1) -- 1707156815.9739866
-node_D(1) -- 1707156817.5782418
-node_C(1) -- 1707156823.7225783
-node_B(1) -- 1707156828.9966369
-node_D(1) -- 1707156832.6051533
-node_C(1) -- 1707156836.74813
-node_B(1) -- 1707156838.013636
-node_C(1) -- 1707156846.769929
-node_B(1) -- 1707156847.0330257
-node_D(1) -- 1707156850.6299367
-node_B(1) -- 1707156856.055893
-node_B(1) -- 1707156864.075496
-node_C(1) -- 1707156866.8027477
-node_D(1) -- 1707156868.6601589
-node_C(1) -- 1707156873.8199074
-node_B(1) -- 1707156883.095861
-node_C(1) -- 1707156884.840899
-node_D(1) -- 1707156885.6885412
-node_B(1) -- 1707156892.1203952
-node_C(1) -- 1707156898.8682628
-node_D(1) -- 1707156900.71683
-node_B(1) -- 1707156902.1361098
-node_D(1) -- 1707156913.7439635
-node_C(1) -- 1707156913.8955393
-node_B(1) -- 1707156920.1604042
-node_B(1) -- 1707156926.1793141
-node_C(1) -- 1707156926.9184282
-node_D(1) -- 1707156927.768041
-node_C(1) -- 1707156932.93982
-node_C(1) -- 1707156938.9563127
-node_B(1) -- 1707156943.210919
-node_D(1) -- 1707156945.800122
-node_C(1) -- 1707156948.9771938
-node_D(1) -- 1707156959.823897
-node_B(1) -- 1707156963.2430768
-node_C(1) -- 1707156967.0075266
+node_B -- 1707250235.26301 -- Acesso permitido por node_A
+node_B -- 1707250253.2935185 -- Acesso permitido por node_A
+node_D -- 1707250266.4248028 -- Acesso permitido por node_A
+node_C -- 1707250268.785715 -- Acesso permitido por node_A
+node_B -- 1707250270.3244805 -- Acesso permitido por node_A
+node_D -- 1707250272.4444282 -- Acesso permitido por node_A
+node_D -- 1707250281.4669244 -- Acesso permitido por node_A
+node_C -- 1707250281.8112144 -- Acesso permitido por node_A
+node_B -- 1707250289.351636 -- Acesso permitido por node_A
+node_D -- 1707250301.5005863 -- Acesso permitido por node_A
+node_C -- 1707250301.8460553 -- Acesso permitido por node_A
+node_B -- 1707250302.3768668 -- Acesso permitido por node_A
+node_C -- 1707250308.8668334 -- Acesso permitido por node_A
+node_B -- 1707250312.402081 -- Acesso permitido por node_A
+node_D -- 1707250316.530623 -- Acesso permitido por node_A
+node_B -- 1707250318.4226816 -- Acesso permitido por node_A
+node_D -- 1707250322.5509756 -- Acesso permitido por node_A
+node_C -- 1707250323.8977334 -- Acesso permitido por node_A
+node_B -- 1707250327.4468358 -- Acesso permitido por node_A
+node_D -- 1707250335.5719335 -- Acesso permitido por node_A
+node_C -- 1707250336.9221714 -- Acesso permitido por node_A
+node_B -- 1707250337.471786 -- Acesso permitido por node_A
+node_C -- 1707250346.9473758 -- Acesso permitido por node_A
+node_B -- 1707250350.5006084 -- Acesso permitido por node_A
+node_D -- 1707250355.6076524 -- Acesso permitido por node_A
+node_C -- 1707250361.9732702 -- Acesso permitido por node_A
+node_B -- 1707250362.5255609 -- Acesso permitido por node_A
+node_D -- 1707250369.6299887 -- Acesso permitido por node_A
+node_B -- 1707250373.5511734 -- Acesso permitido por node_A
+node_D -- 1707250374.647633 -- Acesso permitido por node_A
+node_C -- 1707250376.0027258 -- Acesso permitido por node_A
+node_C -- 1707250786.123926 -- Acesso permitido por node_A
+node_B -- 1707250794.6501782 -- Acesso permitido por node_A
+node_D -- 1707250799.7211168 -- Acesso permitido por node_A
+node_B -- 1707250800.6684566 -- Acesso permitido por node_A
+node_C -- 1707250806.1592276 -- Acesso permitido por node_A
+node_D -- 1707250806.7430897 -- Acesso permitido por node_A
+node_B -- 1707250916.995306 -- Acesso permitido por node_A
+node_C -- 1707250926.9680219 -- Acesso permitido por node_A
+node_D -- 1707250930.4724748 -- Acesso permitido por node_A
+node_C -- 1707250934.9895403 -- Acesso permitido por node_A
+node_B -- 1707250935.0276332 -- Acesso permitido por node_A
+node_D -- 1707250935.490147 -- Acesso permitido por node_A
+node_B -- 1707251341.5903394 -- Acesso permitido por node_A
+node_D -- 1707251348.738444 -- Acesso permitido por node_A
+node_C -- 1707251350.97491 -- Acesso permitido por node_A
+node_B -- 1707251355.606823 -- Acesso permitido por node_A
+node_D -- 1707251357.762623 -- Acesso permitido por node_A
+node_C -- 1707251794.0411766 -- Acesso permitido por node_A
+node_B -- 1707251800.307661 -- Acesso permitido por node_A
+node_D -- 1707251802.9261038 -- Acesso permitido por node_A
+node_B -- 1707252177.3366904 -- Acesso permitido por node_A
+node_D -- 1707252179.9192014 -- Acesso permitido por node_A
+node_B -- 1707252183.3585913 -- Acesso permitido por node_A
+node_C -- 1707252184.6853075 -- Acesso permitido por node_A
+node_D -- 1707252186.937728 -- Acesso permitido por node_A
+node_C -- 1707253018.376306 -- Acesso permitido por node_A
+node_C -- 1707253027.4057355 -- Acesso permitido por node_A
+node_B -- 1707253028.2080927 -- Acesso permitido por node_A
+node_D -- 1707253031.2820072 -- Acesso permitido por node_A
+node_B -- 1707253387.1970866 -- Acesso permitido por node_A
+node_D -- 1707253395.928489 -- Acesso permitido por node_A
+node_C -- 1707253396.2207985 -- Acesso permitido por node_A
+node_B -- 1707253397.213765 -- Acesso permitido por node_A
+node_D -- 1707253406.9511495 -- Acesso permitido por node_A
+node_C -- 1707253410.2391982 -- Acesso permitido por node_A
+node_D -- 1707253411.9712589 -- Acesso permitido por node_A
+node_C -- 1707253566.138735 -- Acesso permitido por node_A
+node_B -- 1707253566.190488 -- Acesso permitido por node_A
+node_D -- 1707253573.083515 -- Acesso permitido por node_A
+node_C -- 1707253574.161989 -- Acesso permitido por node_A
+node_C -- 1707254076.884648 -- Acesso permitido por node_A
+node_B -- 1707254084.1483707 -- Acesso permitido por node_A
+node_D -- 1707254092.509617 -- Acesso permitido por node_A
+node_C -- 1707254093.9173305 -- Acesso permitido por node_A
+node_B -- 1707254104.1796262 -- Acesso permitido por node_A
+node_D -- 1707254109.536376 -- Acesso permitido por node_A
+node_B -- 1707254112.2021394 -- Acesso permitido por node_A
+node_C -- 1707254112.9522727 -- Acesso permitido por node_A
+node_B -- 1707254117.2219472 -- Acesso permitido por node_A
+node_D -- 1707254118.5579867 -- Acesso permitido por node_A
+node_B -- 1707254125.242856 -- Acesso permitido por node_A
+node_C -- 1707254125.976679 -- Acesso permitido por node_A
+node_D -- 1707254339.9498901 -- Acesso permitido por node_A
+node_B -- 1707254343.6022108 -- Acesso permitido por node_A
+node_D -- 1707254345.969566 -- Acesso permitido por node_A
+node_C -- 1707254348.8081357 -- Acesso permitido por node_A
+node_B -- 1707254359.6294186 -- Acesso permitido por node_A
+node_D -- 1707254364.0021105 -- Acesso permitido por node_A
+node_D -- 1707254476.9858603 -- Acesso permitido por node_A
+node_C -- 1707254481.2244008 -- Acesso permitido por node_A
+node_B -- 1707254482.6502807 -- Acesso permitido por node_A
+node_D -- 1707254490.010112 -- Acesso permitido por node_A
+node_C -- 1707254495.2515786 -- Acesso permitido por node_A
+node_B -- 1707254500.6831884 -- Acesso permitido por node_A
+node_D -- 1707254502.033497 -- Acesso permitido por node_A
+node_C -- 1707254502.2709413 -- Acesso permitido por node_A
+node_D -- 1707254799.4106767 -- Acesso permitido por node_A
+node_B -- 1707254800.5763688 -- Acesso permitido por node_A
+node_C -- 1707254805.637885 -- Acesso permitido por node_A
+node_C -- 1707254814.6596875 -- Acesso permitido por node_A
+node_D -- 1707254818.4438398 -- Acesso permitido por node_A
+node_B -- 1707254819.603349 -- Acesso permitido por node_A
+node_D -- 1707254826.4656281 -- Acesso permitido por node_A
+node_C -- 1707254833.689159 -- Acesso permitido por node_A
+node_D -- 1707254836.489593 -- Acesso permitido por node_A
+node_B -- 1707254837.6219778 -- Acesso permitido por node_A
+node_C -- 1707254838.7118537 -- Acesso permitido por node_A
+node_D -- 1707254842.5172236 -- Acesso permitido por node_A
+node_D -- 1707255211.7021058 -- Acesso permitido por node_A
+node_B -- 1707255215.320691 -- Acesso permitido por node_A
+node_B -- 1707255222.340393 -- Acesso permitido por node_A
+node_C -- 1707255222.8776786 -- Acesso permitido por node_A
+node_B -- 1707255227.357404 -- Acesso permitido por node_A
+node_D -- 1707255231.7267919 -- Acesso permitido por node_A
+node_B -- 1707255505.6241593 -- Acesso permitido por node_A
+node_D -- 1707255515.6393747 -- Acesso permitido por node_A
+node_C -- 1707255521.8019245 -- Acesso permitido por node_A
+node_D -- 1707255524.6635497 -- Acesso permitido por node_A
+node_B -- 1707255525.6441152 -- Acesso permitido por node_A
+node_B -- 1707255530.6630604 -- Acesso permitido por node_A
+node_C -- 1707255539.8353815 -- Acesso permitido por node_A
+node_D -- 1707255542.69608 -- Acesso permitido por node_A
+node_B -- 1707255547.692942 -- Acesso permitido por node_A
+node_D -- 1707255549.718293 -- Acesso permitido por node_A
+node_C -- 1707255551.8566837 -- Acesso permitido por node_A
+node_C -- 1707255559.8773568 -- Acesso permitido por node_A
+node_C -- 1707255565.894994 -- Acesso permitido por node_A
+node_B -- 1707255567.7281823 -- Acesso permitido por node_A
+node_D -- 1707255567.748699 -- Acesso permitido por node_A
+node_B -- 1707255580.7569487 -- Acesso permitido por node_A
+node_D -- 1707255583.777572 -- Acesso permitido por node_A
+node_C -- 1707255584.9177372 -- Acesso permitido por node_A
+node_B -- 1707255589.7775648 -- Acesso permitido por node_A
+node_C -- 1707255592.9398177 -- Acesso permitido por node_A
+node_D -- 1707255596.7946796 -- Acesso permitido por node_A
+node_B -- 1707255895.3771613 -- Acesso permitido por node_A
+node_C -- 1707255895.672476 -- Acesso permitido por node_A
+node_D -- 1707255904.2629201 -- Acesso permitido por node_A
+node_C -- 1707255904.6964524 -- Acesso permitido por node_A
+node_B -- 1707255908.4052806 -- Acesso permitido por node_A
+node_B -- 1707256097.232888 -- Acesso permitido por node_A
+node_C -- 1707256107.8594947 -- Acesso permitido por node_A
+node_D -- 1707256111.9284031 -- Acesso permitido por node_A
+node_B -- 1707256113.2639692 -- Acesso permitido por node_A
+node_B -- 1707256119.2846715 -- Acesso permitido por node_A
+node_C -- 1707256127.8944397 -- Acesso permitido por node_A
+node_D -- 1707256129.9584167 -- Acesso permitido por node_A
+node_C -- 1707256171.3375132 -- Acesso permitido por node_B
+node_C -- 1707256181.477062 -- Acesso permitido por node_B
+node_C -- 1707256191.6008208 -- Acesso permitido por node_B
+node_C -- 1707256201.755056 -- Acesso permitido por node_B
+node_C -- 1707256211.916055 -- Acesso permitido por node_B
+node_C -- 1707256224.0896568 -- Acesso permitido por node_B
+node_C -- 1707256235.228031 -- Acesso permitido por node_B
+node_C -- 1707256259.3709817 -- Acesso permitido por node_B
+node_C -- 1707256277.5326686 -- Acesso permitido por node_B
+node_C -- 1707256293.6515076 -- Acesso permitido por node_B
+node_C -- 1707256312.8089712 -- Acesso permitido por node_B
+node_C -- 1707256329.9544709 -- Acesso permitido por node_B
+node_C -- 1707256352.0722651 -- Acesso permitido por node_B
+node_C -- 1707256365.2039723 -- Acesso permitido por node_B
+node_C -- 1707256378.3287623 -- Acesso permitido por node_B
