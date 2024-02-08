@@ -1,6 +1,7 @@
 import os
 import random
 import time
+from datetime import datetime
 from typing import Dict, List, Optional
 
 import requests
@@ -70,10 +71,10 @@ node_metadata.started_election = False
 if os.environ.get("is_master") == "True":
     node_metadata.is_master = True
     node_metadata.master_node = node_metadata.name
-    print(f"O nó '{node_metadata.name}' é o líder!")
+    print(f"\nO nó '{node_metadata.name}' é o coordenador!\n")
 else:
     node_metadata.is_master = False
-    print(f"O nó '{node_metadata.name}' não é o líder.")
+    print(f"\nO nó '{node_metadata.name}' não é o coodenador.\n")
 
 # Fila de acessos ao arquivo
 acess_queue = []
@@ -114,7 +115,7 @@ def free_queue(payload: FileAcessRequestPayload):
     if not node_metadata.is_master:
         raise HTTPException(400, "Esse nó não é o líder!")
 
-    print(f"\nFILA: {[item.node_name for item in acess_queue]}\n")
+    print(f"\nPróximo nó na fila: {[item.node_name for item in acess_queue]}\n")
 
     acess_queue.remove(payload)
 
@@ -124,14 +125,14 @@ def free_queue(payload: FileAcessRequestPayload):
             free_url=f"http://{node_metadata.name}:4000/free_queue", payload=next_access
         )
         data = payload.json()
-        print(f"Permitindo acesso ao nó '{payload.node_name}'")
+        print(f"\nPermitindo acesso ao nó '{payload.node_name}'\n")
         requests.post(
             f"http://{next_access.node_name}:4000/access_permitted",
             json=data,
         )
 
     elif len(acess_queue) == 0:
-        print(f"Permitindo acesso ao nó {payload.node_name}")
+        print(f"\nPermitindo acesso ao nó {payload.node_name}\n")
         requests.post(
             f"http://{payload.node_name}:4000/access_permitted",
             json=None,
@@ -145,8 +146,9 @@ def free_queue(payload: FileAcessRequestPayload):
 def access_permitted(payload: Optional[FileAccessFreePayload] = None):
     with open("./shared_file.txt", "+a") as file:
         timestamp = time.time()
+        timezone = timestamp - 3 * 60 * 60
         file.write(
-            f"{node_metadata.name} -- {timestamp} -- Acesso permitido por {node_metadata.master_node}\n"
+            f"{node_metadata.name} -- {datetime.fromtimestamp(timezone)} (Acesso permitido por {node_metadata.master_node})\n"
         )
 
     if payload:
@@ -159,16 +161,20 @@ def updated_coordinator(payload: NewCoordinatorPayload):
     node_metadata.master_node = payload.coordinator_name
     if payload.coordinator_name == node_metadata.name:
         node_metadata.is_master = True
-        print(f"O nó {node_metadata.name} agora sabe que é o coordenador!")
+        print(f"\nO nó {node_metadata.name} agora sabe que é o coordenador!\n")
     else:
-        print(f"O nó {node_metadata.name} sabe quem é o novo coordenador!")
+        print(
+            f"\nO nó {node_metadata.name} sabe que o novo coordenador é o '{payload.coordinator_name}'!\n"
+        )
 
 
 @app.post("/new_coordinator")
 def multicast_new_coordinator(coordinator_name: str):
     nodes = list(node_metadata.ring.keys())
+
     nodes.remove(node_metadata.name)
-    nodes.remove(node_metadata.master_node)
+    if node_metadata.master_node in nodes:
+        nodes.remove(node_metadata.master_node)
     payload = NewCoordinatorPayload(coordinator_name=coordinator_name)
 
     for node in nodes:
@@ -199,6 +205,8 @@ def put_id_on_ring(payload: ElectionData):
             node_metadata.is_master = True
             node_metadata.master_node = node_metadata.name
 
+        print(f"\nStatus final da eleição: {payload.nodes_ids}\n")
+
         multicast_new_coordinator(new_master)
 
         return {"message": "Processo finalizado!"}
@@ -218,7 +226,7 @@ def put_id_on_ring(payload: ElectionData):
             f"\nO nó vizinho '{next_node}' está offline! Contactando o próximo nó no anel...\n"
         )
         success_node = node_metadata.ring[next_node]
-        print(f"O próximo nó no anel é o {success_node}\n")
+        print(f"\nO próximo nó no anel é o {success_node}\n")
 
         requests.post(
             f"http://{success_node}:4000/election_process", json=next_payload.dict()
@@ -236,7 +244,7 @@ def start_election():
             res = req.json()
             if res["message"] is True:  # Verificando se alguém já iniciou a eleição
                 print(
-                    f"\nO nó {node_metadata.name} identificou que já existe um processo de eleição em andamento!"
+                    f"\nO nó {node_metadata.name} identificou que já existe um processo de eleição em andamento!\n"
                 )
                 node_metadata.is_on_election = True
                 return
@@ -255,7 +263,7 @@ def start_election():
         requests.post(f"http://{next_node}:4000/election_process", json=payload.dict())
     except:
         print(
-            f"\nO nó vizinho '{next_node}' está offline! Contactando o próximo nó no anel...\n"
+            f"\nO nó vizinho '{next_node}' está offline! Enviando ID para o próximo nó no anel...\n"
         )
         success_node = node_metadata.ring[next_node]
         print(f"O próximo nó no anel é o {success_node}\n")
@@ -268,6 +276,7 @@ def start_election():
 def request_resource():
     nodes = list(node_metadata.ring.keys())
     nodes.remove(node_metadata.name)
+    master_node = None
 
     for node in nodes:
         try:
@@ -280,18 +289,23 @@ def request_resource():
         except:  # Se a conexão com o nó não pode ser estabelecida
             if node == node_metadata.master_node:  # Se é o nó master, iniciar eleição
                 print(
-                    f"\nO nó {node} está offline! O nó {node_metadata.name} irá verificar o processo de eleição!"
+                    f"\nO nó {node} está offline! O nó {node_metadata.name} irá verificar o processo de eleição!\n"
                 )
                 start_election()
                 return
-            else:
-                print(
-                    f"\nO nó {node} está offline! Porém, não é o nó master! O processamento irá continuar!"
-                )
 
-    if master_node != node_metadata.master_node or not node_metadata.master_node:
+    if master_node is None:
+        node_metadata.is_master = True
+        node_metadata.master_node = node_metadata.name
+        master_node = node_metadata.name
+
+    elif not node_metadata.master_node or master_node != node_metadata.master_node:
         node_metadata.is_master = False
         node_metadata.master_node = master_node
+
+    # Se era um nó comum que acabou de se tornar coordenador
+    if master_node == node_metadata.name:
+        return
 
     payload = FileAcessRequestPayload(
         node_name=node_metadata.name, timestamp=time.time()
@@ -337,7 +351,7 @@ if __name__ == "__main__":
                 continue
             seconds = random.randint(5, 20)
             print(
-                f"{node_metadata.name} irá gerar uma solicitação daqui a {seconds} segundos."
+                f"\n{node_metadata.name} irá gerar uma solicitação daqui a {seconds} segundos."
             )
             time.sleep(seconds)
             request_resource()
